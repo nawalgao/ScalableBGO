@@ -9,7 +9,9 @@ GPflow uses TensorFlow for running computations, which allows fast execution on 
 
 Manually install it as follows:
 git clone https://github.com/GPflow/GPflow.git
+
 cd GPflow
+
 pip install .
 
 
@@ -20,6 +22,13 @@ Right now, we have the following aquisition functions (which selects multiple po
 2. GP-MLE + Constant Liar Strategy 
 3. GP-MLE with crude user defined EI
 4. Neural Network with last layer Bayesian (still under progress)
+
+
+I am currently working on Neural Networks with last layer as a Bayesian layer. However, I am facing few difficulties related to it. These problems are as follows:
+
+1. Uncertainity quantification in case of LLBNN seems to be dependent on the number of epochs I am running. Is it the problem with the model as a whole or is there a bug in my code?
+
+
 
 
 
