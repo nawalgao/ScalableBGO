@@ -12,3 +12,14 @@ git clone https://github.com/GPflow/GPflow.git
 cd GPflow
 pip install .
 
+
+
+Right now, we have the following aquisition functions (which selects multiple points - parallelizable) implemented, example of which can be checked out in scripts > model_comparisons.py
+
+1. GP-MLE + Snoek Fantasy EI
+2. GP-MLE + Constant Liar Strategy 
+3. GP-MLE with crude user defined EI
+4. Neural Network with last layer Bayesian (still under progress)
+
+
+
