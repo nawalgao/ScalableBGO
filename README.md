@@ -28,6 +28,15 @@ I am currently working on Neural Networks with last layer as a Bayesian layer. H
 
 1. Uncertainity quantification in case of LLBNN seems to be dependent on the number of epochs I am running. Is it the problem with the model as a whole or is there a bug in my code?
 
+Right now, here's the strategy I am using when concerned with LLBNN model :
+
+1. Load the training data.
+2. Fit a neural network (3 hidden layers, 50 hidden nodes for each layer) with backprop.
+3. Instead of using the linear activation function over the outputs of the last layer of the neural network, save this output in the form of variable ll_out.
+4. Use this last layer output as sort of an adaptive basis to train Bayesian Automatic Relevance Determination model. 
+5. Update the prior, get the posterior distribution over the weights associated with adaptive basis.
+6. Check the posterior predictive distribution.
+7. Use PPD to calculate EI and drive the elicitation.
 
 
 
